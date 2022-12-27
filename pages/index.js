@@ -38,7 +38,7 @@ export default function Home() {
             </p>
 
             {/* home button */}
-            <Link href="/categories">
+            <Link href="/products">
               <button className="btn">Explore Now</button>
             </Link>
           </div>

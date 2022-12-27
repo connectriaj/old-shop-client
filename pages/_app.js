@@ -1,10 +1,16 @@
 import Layout from '../layout/Layout';
 import '../styles/globals.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+// Create a client
+const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout title='Home'>
-      <Component {...pageProps} />
-    </Layout>
+    <QueryClientProvider client={queryClient}>
+      <Layout title="Home">
+        <Component {...pageProps} />
+      </Layout>
+    </QueryClientProvider>
   );
 }
